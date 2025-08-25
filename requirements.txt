@@ -4,3 +4,12 @@ requests
 python-dotenv
 pandas
 gunicorn
+nltk
+scikit-learn
+scipy
+torch
+sentence-transformers
+numpy
+matplotlib
+seaborn
+langdetect
