@@ -1,15 +1,10 @@
-Flask
+flask
 flask-cors
 requests
 python-dotenv
-pandas
+pandas   # if you preprocess input
 gunicorn
 nltk
 scikit-learn
-scipy
-torch
-sentence-transformers
 numpy
-matplotlib
-seaborn
 langdetect
