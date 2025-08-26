@@ -19,11 +19,16 @@ def recommend():
     try:
         recs = recommender.get_recommendations(song_title)
 
+        import math
         results = []
         for rec in recs:
             song = rec.get("track_name")
             artist = rec.get("track_artist")
-            
+            # Replace NaN with None
+            if isinstance(artist, float) and math.isnan(artist):
+                artist = None
+            if isinstance(song, float) and math.isnan(song):
+                song = None
             metadata = search_track(song, artist)
             if metadata:
                 results.append({
