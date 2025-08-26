@@ -2,6 +2,9 @@
 
 This is the backend for the Music Recommender app.
 
+## Demo Video
+- [Watch the demo](https://www.youtube.com/watch?v=j7ncdhlwny4)
+
 ## Related Repositories
 - [Frontend](https://github.com/sahana359/music-recommender-frontend)
 - [Model-Training] (https://github.com/sahana359/music-recommender-ml)
