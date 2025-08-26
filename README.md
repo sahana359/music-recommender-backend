@@ -7,7 +7,7 @@ This is the backend for the Music Recommender app.
 
 ## Related Repositories
 - [Frontend](https://github.com/sahana359/music-recommender-frontend)
-- [Model-Training] (https://github.com/sahana359/music-recommender-ml)
+- [Model-Training](https://github.com/sahana359/music-recommender-ml)
 
 ## Features
 - Song recommendations based on input track
