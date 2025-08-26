@@ -1,4 +1,3 @@
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from recommender import Recommender
@@ -69,8 +68,14 @@ def search_songs():
 
     # Filter songs starting with keyword (case-insensitive)
     matches = df[df["track_name"].str.lower().str.startswith(keyword)]
-    track_names = matches["track_name"].head(10).tolist()
-    return jsonify({"songs": track_names})
+    # Get top 10 matches with track name and artist
+    songs = []
+    for _, row in matches.head(10).iterrows():
+        songs.append({
+            "track_name": row["track_name"],
+            "track_artist": row["track_artist"] if "track_artist" in row else None
+        })
+    return jsonify({"songs": songs})
 
 if __name__ == "__main__":
     app.run(debug=True)
